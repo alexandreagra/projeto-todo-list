@@ -252,7 +252,7 @@ input[type="checkbox"]:checked::before {
     }
     
     #data {
-        font-size: 16px !important;
+        font-size: 20px !important;
         height: 32px !important;
     }
 
@@ -278,6 +278,11 @@ input[type="checkbox"]:checked::before {
     .todo-form {
         width: 200px;
         margin-right: 52px;
+    }
+
+    #data {
+        font-size: 16px !important;
+        height: 32px !important;
     }
 
     .textinho {

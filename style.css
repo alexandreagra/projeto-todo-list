@@ -116,8 +116,7 @@ body {
 
 .textinho {
     display: flex;
-    flex-direction: row;
-    gap: 20px;
+    flex-direction: column;
     align-items: center;
     text-align: center;
     justify-content: center;

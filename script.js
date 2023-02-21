@@ -14,6 +14,7 @@ function displayDia() {
   document.querySelector("#dia-semana").innerHTML = dia;
 }
 
+
 window.onload = function () {
   textos();
   displayDate();
@@ -50,13 +51,13 @@ function textos() {
   let textinho = document.querySelector(".textinho");
 
   if (horaAtual >= 00 && horaAtual < 12) {
-    textinho.innerHTML = `Bom dia!<box-icon name='sun' color='black' size='lg'></box-icon>`;
+    textinho.innerHTML = `<box-icon name='sun' color='black' size='lg'></box-icon>Good morning!`;
     document.body.style.backgroundColor = "#E1E6E5";
   } else if (horaAtual >= 12 && horaAtual < 18) {
-    textinho.innerHTML = `<box-icon type='solid' name='sun' color='yellow' size='lg'></box-icon>`;
-    document.body.style.backgroundColor = "#B9D7F0";
+    textinho.innerHTML = `<box-icon type='solid' name='sun' color='yellow' size='lg'></box-icon>Good afternoon!`;
+    document.body.style.backgroundColor = "#B9DBE9";
   } else if (horaAtual >= 18 || horaAtual < 00) {
-    textinho.innerHTML = `<box-icon  type='solid' name='moon' size='lg' color='white'></box-icon>`;
+    textinho.innerHTML = `<box-icon  type='solid' name='moon' size='lg' color='white'></box-icon>Good evening!`;
     document.body.style.backgroundColor = "#15253F";
     document.querySelector("#relogio").style.color = "white";
     document.querySelector("#data").style.color = "white";

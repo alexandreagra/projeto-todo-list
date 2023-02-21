@@ -331,23 +331,24 @@ li > div > span {
         margin: 12px auto;
         justify-content: space-around;
         font-size: 12px;
-        width: 380px;
+        width: 372px;
     }
 
     .stats li {
         display: flex;
         align-items: center;
         justify-content: center;
+        gap: 4px;
     }
 
     .stats #remaining-tasks {
-        padding: 4px;
+        padding: 4px 8px;
     }
     .stats #completed-tasks {
-        padding: 4px;
+        padding: 4px 8px;
     }
     .stats #total-tasks {
-        padding: 4px;
+        padding: 4px 8px;
     }
 
     .primeiro-titulo-header {

@@ -57,7 +57,7 @@ body {
     text-indent: 12px;
     text-transform: uppercase;
     border-radius: 4px;
-    background-color: #f0f8ff93;
+    background-color: rgba(255, 255, 255, 0.082);
     box-shadow: 2px 1px 8px rgba(0, 0, 0, 0.233);
     font-weight: 600;
     text-shadow: 0px 2px 12px rgba(0, 0, 0, 0.123);
@@ -75,6 +75,7 @@ body {
     height: 100%;
     width: 340px;
     position: static;
+    background-color: transparent !important;
 }
 
 #dia-semana {
@@ -90,21 +91,21 @@ body {
 }
 
 #horas {
-    background-color: #f0f8ff93;
+    background-color: rgba(255, 255, 255, 0.082);
     padding: 8px 12px;
     border-radius: 4px;
     box-shadow: 2px 1px 16px rgba(0, 0, 0, 0.199);
 }
 
 #minutos {
-    background-color: #f0f8ff93;
+    background-color: rgba(255, 255, 255, 0.082);
     padding: 8px 12px;
     border-radius: 4px;
     box-shadow: 2px 1px 16px rgba(0, 0, 0, 0.199);
 }
 
 #segundos {
-    background-color: #f0f8ff93;
+    background-color: rgba(255, 255, 255, 0.082);
     padding: 8px 12px;
     border-radius: 4px;
     box-shadow: 2px 1px 16px rgba(0, 0, 0, 0.199);
@@ -130,6 +131,7 @@ body {
     animation: appear;
     animation-duration: 4s;
     border-radius: 50%;
+    
 }
 
 .textinho box-icon {

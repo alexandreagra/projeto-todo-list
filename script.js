@@ -77,6 +77,7 @@ const totalTasks = document.querySelector("#total-tasks");
 const completedTasks = document.querySelector("#completed-tasks");
 const remainingTasks = document.querySelector("#remaining-tasks");
 const mainInput = document.querySelector("#todo-form input");
+const resetAll = document.querySelector("#resetar");
 
 let tasks = JSON.parse(localStorage.getItem("tasks")) || [];
 
@@ -85,6 +86,8 @@ if (localStorage.getItem('tasks')) {
     createTask(task);
   }); //Fora da function
 }
+
+// EVENTS
 
 todoForm.addEventListener("submit", (e) => {
   e.preventDefault();
@@ -129,6 +132,8 @@ todoList.addEventListener('input', (e) => {
 
   updateTask(taskId, e.target)
 })
+
+// FUNCTIONS
 
 function createTask(task) {
   const novaTask = document.createElement("li");

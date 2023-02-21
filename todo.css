@@ -98,6 +98,12 @@ input[type="checkbox"]:checked::before {
     transform: scale(1);
 }
 
+button:focus {
+    background-color: transparent;
+    outline: none;
+    color: none !important;
+}
+
 .todos li button {
     border: 0;
     padding: .25rem;

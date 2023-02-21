@@ -98,10 +98,18 @@ input[type="checkbox"]:checked::before {
     transform: scale(1);
 }
 
-:focus {
+.botao-add:focus {
     background-color: transparent;
     outline: none;
-    color: none !important;
+    border: none;
+    box-shadow: none;
+}
+
+.resetar:focus {
+    background-color: transparent;
+    outline: none;
+    border: none;
+    box-shadow: none;
 }
 
 .todos li button {

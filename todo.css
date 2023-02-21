@@ -1,0 +1,391 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+.todos {
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.281);
+    border-radius: 4px 4px 4px 4px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    margin: 0 auto;
+    padding: 0;
+    animation: appear;
+    animation-duration: 1s; 
+    width: 800px;
+    height: 400px;
+}
+
+.todos::-webkit-scrollbar {
+    width: 16px;
+}
+
+.todos::-webkit-scrollbar-thumb {
+    background-color: rgba(82, 219, 123, 0.712);
+    border-radius: 0px 4px 4px 0px;
+}
+
+.todos::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.tarefa {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: #f5f5f5;
+}
+
+.todos ul {
+    margin: 0;
+    width: 800px;
+    display: flex;
+    flex-direction: column;
+}
+
+.todos li {
+    background-color: white;
+    list-style: none;
+    border-radius: 0px;
+    margin-bottom: 1.5rem;
+    padding: 24px;
+    width: 800px;
+    word-break: break-all;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.todos li div{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.todos li.complete {
+    background-color: rgb(173, 202, 230);
+    text-decoration: line-through;
+    color: rgb(66, 118, 197);
+}
+
+input[type="checkbox"] {
+    appearance: none;
+    background-color: transparent;
+    margin: 0;
+    width: 1.5rem;
+    height: 1.5rem;
+    border: 2px solid rgba(0, 0, 0, 0.603);
+    border-radius: 4px;
+    display: grid;
+    place-content: center;
+    transition: all .2s ease-in-out;
+}
+
+input[type="checkbox"]::before {
+    content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' style='fill: rgba(0, 0, 0, 1);transform: ;msFilter:;'%3E%3Cpath d='m10 15.586-3.293-3.293-1.414 1.414L10 18.414l9.707-9.707-1.414-1.414z'%3E%3C/path%3E%3C/svg%3E");
+    transform: scale(0);
+    transition: all .2s ease-in-out;
+}
+
+input[type="checkbox"]:checked {
+    background-color: rgba(82, 219, 123, 0.712);
+    border-color: darkblue;
+}
+
+input[type="checkbox"]:checked::before {
+    transform: scale(1);
+}
+
+.todos li button {
+    border: 0;
+    padding: .25rem;
+    display: grid;
+    place-content: center;
+    background-color: transparent;
+}
+
+.todos li button box-icon {
+    width: 20px;
+    width: 20px;
+    background-color: transparent;
+}
+
+.todos li button:hover box-icon {
+    transform: scale(.8);
+    background-color: transparent;
+}
+
+.todos li span {
+    padding: 2px;
+    border-radius: 4px;
+    transition: all .2s ease-in-out;
+}
+
+.todos li span:focus {
+    background-color: lightblue;
+    outline: none;
+}
+
+.todos li span[contenteditable]:hover {
+    background-color: lightblue;
+}
+
+#main-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
+    width: 800px;
+    animation: appear;
+    animation-duration: 1s;
+}
+
+#main-header h1 {
+    margin-top: 20px;
+}
+
+.primeiro-titulo-header {
+    display: flex;
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: rgba(0, 0, 0, 0.9);
+}
+
+#todo-form { /* tarefa e botao*/
+    display: flex;
+    gap: 8px;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#todo-form input {
+    width: 560px;
+    padding: 12px;
+    font-size: 12px;
+    border: none;
+    border-radius: 4px;
+}
+
+#todo-form button {
+    width: 80px;
+    padding: 12px;
+    font-size: 12px;
+    background-color: white;
+    border: none;
+    border-radius: 4px;
+}
+
+#todo-form button:hover {
+    transition: all .2s ease-out;
+    transform: scale(1.1);
+    border: 1px solid black;
+    background-color: rgb(173, 202, 230);
+}
+
+.stats {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 800px;
+    margin: 0 auto;
+    margin-top: 16px;
+    list-style: none;
+    padding: 0;
+    animation: appear;
+    animation-duration: 1s;
+}
+
+.stats #remaining-tasks {
+    background-color:rgba(243, 131, 3, 0.541) ;
+    padding: 4px 8px;
+    border-radius: 4px;
+}
+
+.stats #completed-tasks {
+    background-color: rgba(82, 219, 123, 0.712);
+    padding: 4px 8px;
+    border-radius: 4px;
+}
+
+.stats #total-tasks {
+    background-color:rgba(183, 31, 221, 0.541) ;
+    padding: 4px 8px;
+    border-radius: 4px;
+}
+
+.resetar {
+    width: 80px;
+    font-size: 12px;
+    background-color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 12px;
+    border-radius: 4px;
+}
+
+.resetar:hover {
+    transition: all .2s ease-out;
+    transform: scale(1.1);
+    border: 1px solid black;
+    background-color: rgb(240, 122, 122);
+}
+
+@media (min-width: 800px) and (max-width: 1200px) {
+
+    .todo-form {
+        width: 200px;
+        margin-right: 52px;
+    }
+
+    #relogio {
+        display: none !important;
+    }
+
+    .todos {
+        width: 800px;
+        margin: 0 auto;
+    }
+    
+    #data {
+        font-size: 16px !important;
+        height: 32px !important;
+    }
+
+    .textinho {
+        font-size: 32px !important;;
+        height: 24px;
+        margin-bottom: 0 !important;
+    }
+
+    #main-container {
+        width: 800px;
+        margin: 0 auto;
+    }
+
+    .stats {       
+        margin: 20px auto;
+        gap: 36px;
+    }
+}
+
+@media (min-width: 360px) and (max-width: 800px) {
+
+    .todo-form {
+        width: 200px;
+        margin-right: 52px;
+    }
+
+    .textinho {
+        font-size: 24px !important;;
+        height: 24px;
+        margin-bottom: 0 !important;
+    }
+
+    #relogio {
+        display: none !important;
+    }
+
+    #data-hora {
+        animation: none !important;
+    }
+
+    #main-header {
+        width: 400px;
+        justify-content: center;
+        margin: 0 auto;
+        gap: 12px;
+    }
+
+    .todos li {
+        width: 343px;
+        margin-right: 36px;
+    }
+
+    .stats {
+        gap: 24px;
+        padding: 12px;
+        margin: 0 auto;
+        justify-content: center;
+        font-size: 12px;
+        width: 400px;
+    }
+
+    .stats li {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .stats #remaining-tasks {
+        padding: 4px;
+    }
+    .stats #completed-tasks {
+        padding: 4px;
+    }
+    .stats #total-tasks {
+        padding: 4px;
+    }
+
+    .primeiro-titulo-header {
+        font-size: 20px;
+    }
+
+    .todos {
+        height: 300px;
+        width: 360px;
+    }
+
+    #todo-form input {
+        width: 200px;
+        padding: 12px;
+        font-size: 12px;
+        border: none;
+        border-radius: 4px;
+    }
+    
+    #todo-form button {
+        width: 80px;
+        padding: 12px;
+        font-size: 12px;
+        background-color: white;
+        border: none;
+        border-radius: 4px;
+    }
+
+    #remaining-tasks {
+        padding: 0;
+    }
+
+}
+
+@keyframes appear{
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes topbottom{
+    from {
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(0%);
+    }
+}
+
+@keyframes fromright {
+    from {
+        transform: translateX(100%);
+    } to {
+        transform: translateX(0%);
+    }
+}
+

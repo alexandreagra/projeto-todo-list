@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="todo.css">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Shantell+Sans:wght@500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <title>To-Do List</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+      <main id="cabecalho">
+        <section class="app-boas-vindas">
+          <h1 class="titulo"><div class="titulo-cor">My</div> To-Do List</h1>
+        </section>
+          <span class="textinho"></span>
+        <section id="data-hora">
+          <div id="relogio">
+            <span id="horas"></span>
+            <span class="pontos">:</span>
+            <span id="minutos"></span>
+            <span class="pontos">:</span>
+            <span id="segundos"></span>
+          </div>
+          <div class="dias">
+            <span id="data"></span>
+            <span id="dia-semana"></span>
+          </div>
+        </section>
+      </main>
+      <section id="main-header">
+        <div>
+          <h1 class="primeiro-titulo-header">Tasks</h1>
+        </div>
+        <form action="" id="todo-form">
+          <input type="text" autofocus name="task-name" class="container" placeholder="Type a task here">
+          <button type="submit">Add task</button>
+        </form>
+      </section>
+      <section>
+        <div class="container" id="main-container">
+          <ul class="todos">
+
+          </ul>
+          <ul class="stats">
+            <li>
+              <span>Remaining:</span>
+              <span id="remaining-tasks">0</span>
+            </li>
+            <li>
+              <span>Completed:</span>
+              <span id="completed-tasks">0</span>
+            </li>
+            <li>
+              <span>Total:</span>
+              <span id="total-tasks">0</span>
+            </li>
+            <li>
+              <span><button type="reset" class="resetar">Clear all</button></span>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+<footer></footer>
+
+  <script src="script.js"></script>
+  <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+</body>
+
+</html>

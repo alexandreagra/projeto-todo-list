@@ -1,0 +1,156 @@
+*{
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+* body {
+    color: rgba(0, 0, 0, 0.9);
+}
+
+body {
+    padding: 0;
+    margin: 0; 
+    background-color: #FFDEE9;
+}
+
+#cabecalho {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 0 20px;
+}
+
+.app-boas-vindas h1 {
+    font-size: 60px;
+    margin: 0;
+    padding: 12px;
+}
+
+#data-hora {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: flex-end;
+    justify-content: space-between;
+    animation: fromright;
+    animation-duration: 1s;
+}
+
+.titulo {
+    display: flex;
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    animation: topbottom;
+    animation-duration: 1s;
+}
+
+
+#data {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    margin: 20px 32px;
+    height: 48px;
+    width: 334px;
+    letter-spacing: 12px;
+    text-indent: 12px;
+    text-transform: uppercase;
+    border-radius: 4px;
+    background-color: #f0f8ff93;
+    box-shadow: 2px 1px 8px rgba(0, 0, 0, 0.233);
+    font-weight: 600;
+    text-shadow: 0px 2px 12px rgba(0, 0, 0, 0.123);
+}
+
+#relogio {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    text-align: center;
+    margin: 20px 32px;
+    font-size: 40px;
+    height: 100%;
+    width: 340px;
+    position: static;
+}
+
+#dia-semana {
+    font-size: 32px;
+    letter-spacing: 60px;
+    text-indent: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(82, 219, 123, 0.712);
+    text-transform: uppercase;
+    font-weight: 800;
+}
+
+#horas {
+    background-color: #f0f8ff93;
+    padding: 8px 12px;
+    border-radius: 4px;
+    box-shadow: 2px 1px 16px rgba(0, 0, 0, 0.199);
+}
+
+#minutos {
+    background-color: #f0f8ff93;
+    padding: 8px 12px;
+    border-radius: 4px;
+    box-shadow: 2px 1px 16px rgba(0, 0, 0, 0.199);
+}
+
+#segundos {
+    background-color: #f0f8ff93;
+    padding: 8px 12px;
+    border-radius: 4px;
+    box-shadow: 2px 1px 16px rgba(0, 0, 0, 0.199);
+}
+
+.pontos {
+    align-items: center;
+}
+
+.textinho {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    margin: auto;
+    margin-bottom: 80px;
+    font-size: 48px;
+    padding: 12px;
+    height: 80px;
+    font-family: 'Shantell Sans', cursive;
+    font-weight: 300;
+    animation: appear;
+    animation-duration: 4s;
+    border-radius: 50%;
+}
+
+.textinho box-icon {
+    width: 60px;
+    height: 60px;
+}
+
+.titulo-cor {
+    color: rgba(82, 219, 123, 0.712);
+    margin-right: 8px ;
+}
+
+@media (max-width: 1200px) {
+    #cabecalho {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .titulo {
+        font-size: 32px !important;
+    }
+}

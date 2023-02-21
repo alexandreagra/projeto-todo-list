@@ -98,7 +98,7 @@ input[type="checkbox"]:checked::before {
     transform: scale(1);
 }
 
-button:focus {
+:focus {
     background-color: transparent;
     outline: none;
     color: none !important;

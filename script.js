@@ -14,7 +14,6 @@ function displayDia() {
   document.querySelector("#dia-semana").innerHTML = dia;
 }
 
-
 window.onload = function () {
   textos();
   displayDate();
@@ -81,6 +80,12 @@ const mainInput = document.querySelector("#todo-form input");
 
 let tasks = JSON.parse(localStorage.getItem("tasks")) || [];
 
+if (localStorage.getItem('tasks')) {
+  tasks.map((task) => {
+    createTask(task);
+  }); //Fora da function
+}
+
 todoForm.addEventListener("submit", (e) => {
   e.preventDefault();
 
@@ -104,6 +109,27 @@ todoForm.addEventListener("submit", (e) => {
   mainInput.focus();
 });
 
+todoList.addEventListener("click", (e) => {
+  if (e.target.classList.contains('remove-task') || e.target.parentElement.classList.contains('remove-task') || e.target.parentElement.parentClass.classList.contains('remove-task')) {
+    const taskId = e.target.closest('li').id
+
+    removeTask(taskId);
+  }
+})
+
+todoList.addEventListener('keydown', (e) => {
+   if (e.keyCode === 13) {
+    e.preventDefault();
+    e.target.blur()
+  }
+})
+
+todoList.addEventListener('input', (e) => {
+  const taskId = e.target.closest('li').id
+
+  updateTask(taskId, e.target)
+})
+
 function createTask(task) {
   const novaTask = document.createElement("li");
   novaTask.setAttribute("id", task.id);
@@ -122,11 +148,56 @@ function createTask(task) {
   }</span>
               </div>
               <button title="Remove "${task.name}" task" class="remove-task">
-                <box-icon name='message-square-x'></box-icon>
+              <box-icon name='window-close' size='sm' color='#f22929e1'></box-icon> 
               </button>
   `;
 
   novaTask.innerHTML = novaTaskMarcada;
 
   todoList.appendChild(novaTask);
+
+  countTasks()
+}
+
+function countTasks() {
+  const completedTasksArray = tasks.filter((task) => task.isCompleted === true)
+
+  totalTasks.textContent = tasks.length 
+  completedTasks.textContent = completedTasksArray.length
+  remainingTasks.textContent = tasks.length - completedTasksArray.length
+}
+
+function removeTask(taskId) {
+  tasks = tasks.filter((task) => task.id !== parseInt(taskId))
+
+  localStorage.setItem('tasks', JSON.stringify(tasks))
+
+  document.getElementById(taskId).remove()
+
+  countTasks()
+}
+
+function updateTask(taskId, el) {
+  const task = tasks.find((task) => task.id === parseInt(taskId))
+
+  if (el.hasAttribute('contenteditable')) {
+    task.name = el.textContent
+  } else {
+    const span = el.nextElementSibling
+    const parent = el.closest('li')
+
+    task.isCompleted = !task.isCompleted
+
+    if(task.isCompleted) {
+      span.removeAttribute('contenteditable')
+      parent.classList.add('complete')
+    } else {
+      span.setAttribute('contenteditable', 'true')
+      parent.classList.remove('complete')
+    }
+  }
+
+  localStorage.setItem('tasks', JSON.stringify(tasks))
+
+  countTasks()
 }

@@ -109,10 +109,6 @@ input[type="checkbox"]:checked::before {
     border: none;
 }
 
-.todos li button box-icon {
-    
-}
-
 .todos li button:hover {
     transform: scale(.8);
 }

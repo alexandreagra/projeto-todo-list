@@ -153,7 +153,7 @@ function createTask(task) {
   }</span>
               </div>
               <button title="Remove "${task.name}" task" class="remove-task">
-              <box-icon name='x-circle' size="28px" color="#FE2E34"></box-icon></box-icon> 
+              <box-icon name='x' size="28px" color="#FE2E34"></box-icon></box-icon> 
               </button>
   `;
 

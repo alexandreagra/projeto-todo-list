@@ -147,7 +147,6 @@ input[type="checkbox"]:checked::before {
     font-size: 36px;
     font-weight: 700;
     margin-bottom: 20px;
-    color: rgba(255, 255, 255, 0.877);
 }
 
 #todo-form { /* tarefa e botao*/

@@ -58,12 +58,12 @@ function textos() {
   } else if (horaAtual >= 18 || horaAtual < 00) {
     textinho.innerHTML = `<box-icon  type='solid' name='moon' size='lg' color='white'></box-icon>Good evening!`;
     document.body.style.backgroundColor = "#15253F";
-    document.querySelector("#relogio").style.color = "white";
-    document.querySelector("#data").style.color = "white";
-    document.querySelector(".textinho").style.color = "white";
-    document.querySelector(".titulo").style.color = "white";
-    document.querySelector(".primeiro-titulo-header").style.color = "white";
-    document.querySelector(".stats").style.color = "white";
+    document.querySelector("#relogio").style.color = "#ffffffe0;";
+    document.querySelector("#data").style.color = "#ffffffe0;";
+    document.querySelector(".textinho").style.color = "#ffffffe0;";
+    document.querySelector(".titulo").style.color = "#ffffffe0;";
+    document.querySelector(".primeiro-titulo-header").style.color = "#ffffffe0;";
+    document.querySelector(".stats").style.color = "#ffffffe0;";
   }
 }
 
@@ -77,7 +77,7 @@ const totalTasks = document.querySelector("#total-tasks");
 const completedTasks = document.querySelector("#completed-tasks");
 const remainingTasks = document.querySelector("#remaining-tasks");
 const mainInput = document.querySelector("#todo-form input");
-const resetAll = document.querySelector("#resetar");
+const resetAll = document.querySelector(".resetar");
 
 let tasks = JSON.parse(localStorage.getItem("tasks")) || [];
 
@@ -132,6 +132,8 @@ todoList.addEventListener('input', (e) => {
 
   updateTask(taskId, e.target)
 })
+
+
 
 // FUNCTIONS
 

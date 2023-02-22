@@ -109,6 +109,10 @@ input[type="checkbox"]:checked::before {
     border: none;
 }
 
+.todos li button box-icon {
+    
+}
+
 .todos li button:hover {
     transform: scale(.8);
 }
@@ -222,7 +226,7 @@ li > div > span {
 .resetar {
     width: 80px;
     font-size: 12px;
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.877);
     border: none;
     border-radius: 4px;
     padding: 12px;

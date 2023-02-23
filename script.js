@@ -58,12 +58,12 @@ function textos() {
   } else if (horaAtual >= 18 || horaAtual < 00) {
     textinho.innerHTML = `<box-icon  type='solid' name='moon' size='lg' color='white'></box-icon>Good evening!`;
     document.body.style.backgroundColor = "#15253F";
-    document.querySelector("#relogio").style.color = "#ffffffe0;";
-    document.querySelector("#data").style.color = "#ffffffe0;";
-    document.querySelector(".textinho").style.color = "#ffffffe0;";
-    document.querySelector(".titulo").style.color = "#ffffffe0;";
-    document.querySelector(".primeiro-titulo-header").style.color = "#ffffffe0;";
-    document.querySelector(".stats").style.color = "#ffffffe0;";
+    document.querySelector("#relogio").style.color = "#ffffffe0";
+    document.querySelector("#data").style.color = "#ffffffe0";
+    document.querySelector(".textinho").style.color = "#ffffffe0";
+    document.querySelector(".titulo").style.color = "#ffffffe0";
+    document.querySelector(".primeiro-titulo-header").style.color = "#ffffffe0";
+    document.querySelector(".stats").style.color = "#ffffffe0";
   }
 }
 
@@ -81,7 +81,7 @@ const resetAll = document.querySelector(".resetar");
 
 let tasks = JSON.parse(localStorage.getItem("tasks")) || [];
 
-if (localStorage.getItem('tasks')) {
+if (localStorage.getItem("tasks")) {
   tasks.map((task) => {
     createTask(task);
   }); //Fora da function
@@ -113,27 +113,29 @@ todoForm.addEventListener("submit", (e) => {
 });
 
 todoList.addEventListener("click", (e) => {
-  if (e.target.classList.contains('remove-task') || e.target.parentElement.classList.contains('remove-task') || e.target.parentElement.parentClass.classList.contains('remove-task')) {
-    const taskId = e.target.closest('li').id
+  if (
+    e.target.classList.contains("remove-task") ||
+    e.target.parentElement.classList.contains("remove-task") ||
+    e.target.parentElement.parentClass.classList.contains("remove-task")
+  ) {
+    const taskId = e.target.closest("li").id;
 
     removeTask(taskId);
   }
-})
+});
 
-todoList.addEventListener('keydown', (e) => {
-   if (e.keyCode === 13) {
+todoList.addEventListener("keydown", (e) => {
+  if (e.keyCode === 13) {
     e.preventDefault();
-    e.target.blur()
+    e.target.blur();
   }
-})
+});
 
-todoList.addEventListener('input', (e) => {
-  const taskId = e.target.closest('li').id
+todoList.addEventListener("input", (e) => {
+  const taskId = e.target.closest("li").id;
 
-  updateTask(taskId, e.target)
-})
-
-
+  updateTask(taskId, e.target);
+});
 
 // FUNCTIONS
 
@@ -163,48 +165,48 @@ function createTask(task) {
 
   todoList.appendChild(novaTask);
 
-  countTasks()
+  countTasks();
 }
 
 function countTasks() {
-  const completedTasksArray = tasks.filter((task) => task.isCompleted === true)
+  const completedTasksArray = tasks.filter((task) => task.isCompleted === true);
 
-  totalTasks.textContent = tasks.length 
-  completedTasks.textContent = completedTasksArray.length
-  remainingTasks.textContent = tasks.length - completedTasksArray.length
+  totalTasks.textContent = tasks.length;
+  completedTasks.textContent = completedTasksArray.length;
+  remainingTasks.textContent = tasks.length - completedTasksArray.length;
 }
 
 function removeTask(taskId) {
-  tasks = tasks.filter((task) => task.id !== parseInt(taskId))
+  tasks = tasks.filter((task) => task.id !== parseInt(taskId));
 
-  localStorage.setItem('tasks', JSON.stringify(tasks))
+  localStorage.setItem("tasks", JSON.stringify(tasks));
 
-  document.getElementById(taskId).remove()
+  document.getElementById(taskId).remove();
 
-  countTasks()
+  countTasks();
 }
 
 function updateTask(taskId, el) {
-  const task = tasks.find((task) => task.id === parseInt(taskId))
+  const task = tasks.find((task) => task.id === parseInt(taskId));
 
-  if (el.hasAttribute('contenteditable')) {
-    task.name = el.textContent
+  if (el.hasAttribute("contenteditable")) {
+    task.name = el.textContent;
   } else {
-    const span = el.nextElementSibling
-    const parent = el.closest('li')
+    const span = el.nextElementSibling;
+    const parent = el.closest("li");
 
-    task.isCompleted = !task.isCompleted
+    task.isCompleted = !task.isCompleted;
 
-    if(task.isCompleted) {
-      span.removeAttribute('contenteditable')
-      parent.classList.add('complete')
+    if (task.isCompleted) {
+      span.removeAttribute("contenteditable");
+      parent.classList.add("complete");
     } else {
-      span.setAttribute('contenteditable', 'true')
-      parent.classList.remove('complete')
+      span.setAttribute("contenteditable", "true");
+      parent.classList.remove("complete");
     }
   }
 
-  localStorage.setItem('tasks', JSON.stringify(tasks))
+  localStorage.setItem("tasks", JSON.stringify(tasks));
 
-  countTasks()
+  countTasks();
 }

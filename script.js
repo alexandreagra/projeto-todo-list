@@ -115,13 +115,19 @@ todoForm.addEventListener("submit", (e) => {
 todoList.addEventListener("click", (e) => {
   if (
     e.target.classList.contains("remove-task") ||
-    e.target.parentElement.classList.contains("remove-task") ||
-    e.target.parentElement.parentClass.classList.contains("remove-task")
+    e.target.parentElement.classList.contains("remove-task")
   ) {
     const taskId = e.target.closest("li").id;
 
     removeTask(taskId);
   }
+});
+
+resetAll.addEventListener("click", (e) => {
+  document.querySelectorAll(".todos li").forEach((e) => {    
+    removeAllTasks();
+    e.remove();
+  });
 });
 
 todoList.addEventListener("keydown", (e) => {
@@ -182,6 +188,14 @@ function removeTask(taskId) {
   localStorage.setItem("tasks", JSON.stringify(tasks));
 
   document.getElementById(taskId).remove();
+
+  countTasks();
+}
+
+function removeAllTasks() {
+  tasks = [];
+
+  localStorage.setItem("tasks", JSON.stringify(tasks));
 
   countTasks();
 }

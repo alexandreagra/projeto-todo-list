@@ -245,6 +245,11 @@ li > div > span {
 
 @media (min-width: 800px) and (max-width: 1200px) {
 
+    .titulo {
+        margin: 16px 0;
+        padding: 12px;
+    }
+
     .todo-form {
         width: 200px;
         margin-right: 52px;
@@ -268,6 +273,8 @@ li > div > span {
         font-size: 32px !important;;
         height: 24px;
         margin-bottom: 0 !important;
+        margin-top: 28px !important;
+        gap: 16px !important;
     }
 
     #main-container {
@@ -322,6 +329,8 @@ li > div > span {
         font-size: 24px !important;;
         height: 24px;
         margin-bottom: 0 !important;
+        margin-top: 20px !important;
+        gap: 16px !important;
     }
 
     #relogio {

@@ -120,16 +120,16 @@ body {
     text-align: center;
     justify-content: center;
     margin: auto;
-    margin-bottom: 80px;
+    margin-bottom: 68px;
     font-size: 48px;
     padding: 12px;
     height: 80px;
-    font-family: 'Shantell Sans', cursive;
-    font-weight: 300;
+    gap: 40px;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 400;
     animation: appear;
     animation-duration: 4s;
     border-radius: 50%;
-    
 }
 
 .textinho box-icon {

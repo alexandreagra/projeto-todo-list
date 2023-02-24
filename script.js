@@ -56,7 +56,7 @@ function textos() {
     textinho.innerHTML = `<box-icon type='solid' name='sun' color='yellow' size='lg'></box-icon>Good afternoon!`;
     document.body.style.backgroundColor = "#B9DBE9";
   } else if (horaAtual >= 18 || horaAtual < 00) {
-    textinho.innerHTML = `<box-icon  type='solid' name='moon' size='lg' color='white'></box-icon>Good evening!`;
+    textinho.innerHTML = `<box-icon  type='solid' name='moon' size='lg' color='#E5E5E5'></box-icon>Good evening!`;
     document.body.style.backgroundColor = "#15253F";
     document.querySelector("#relogio").style.color = "#ffffffe0";
     document.querySelector("#data").style.color = "#ffffffe0";
@@ -78,7 +78,7 @@ const completedTasks = document.querySelector("#completed-tasks");
 const remainingTasks = document.querySelector("#remaining-tasks");
 const mainInput = document.querySelector("#todo-form input");
 const resetAll = document.querySelector(".resetar");
-const addButton = document.querySelector(".botao-add")
+const addButton = document.querySelector(".botao-add");
 
 let tasks = JSON.parse(localStorage.getItem("tasks")) || [];
 

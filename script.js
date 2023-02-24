@@ -78,6 +78,7 @@ const completedTasks = document.querySelector("#completed-tasks");
 const remainingTasks = document.querySelector("#remaining-tasks");
 const mainInput = document.querySelector("#todo-form input");
 const resetAll = document.querySelector(".resetar");
+const addButton = document.querySelector(".botao-add")
 
 let tasks = JSON.parse(localStorage.getItem("tasks")) || [];
 
@@ -124,7 +125,7 @@ todoList.addEventListener("click", (e) => {
 });
 
 resetAll.addEventListener("click", (e) => {
-  document.querySelectorAll(".todos li").forEach((e) => {    
+  document.querySelectorAll(".todos li").forEach((e) => {
     removeAllTasks();
     e.remove();
   });

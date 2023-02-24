@@ -179,6 +179,7 @@ li > div > span {
     padding: 12px;
     font-size: 12px;
     background-color: rgba(255, 255, 255, 0.877);
+    color: black;
     border: none;
     border-radius: 4px;
     cursor: pointer;
@@ -232,6 +233,7 @@ li > div > span {
     padding: 12px;
     border-radius: 4px;
     cursor: pointer;
+    color: black;
 }
 
 .resetar:hover {
@@ -276,6 +278,19 @@ li > div > span {
     .stats {       
         margin: 20px auto;
         gap: 36px;
+    }
+
+    #todo-form button:hover {
+        transform: scale(1);
+        border: none !important;
+        background-color: #ffffffe0 !important;
+    }
+
+    .resetar:hover {
+        transition: all .2s ease-out;
+        transform: scale(1);
+        border: none;
+        background-color: #ffffffe0;
     }
 }
 
@@ -374,6 +389,7 @@ li > div > span {
         padding: 12px;
         font-size: 12px;
         background-color: white;
+        color: black;
     }
 
     #todo-form button:hover {

@@ -343,27 +343,38 @@ li > div > span {
         font-size: 20px;
     }
     .todos {
-        display: grid;  
-        grid-template-columns: 100%;
-        height: auto;
+        display: flex;  
+        flex-direction: column;
         width: 360px;
         max-height: 300px
     }
     .todos li {  
         align-items: center;
         overflow: hidden;
-        width: 360px;
+        max-width: 360px;
+        min-height: 60px;
     }
 
     .todos li span {
-        padding: 4px;
         border-radius: 4px;
         transition: all .2s ease-in-out;
         width: 168px;
-        max-height: 80px;
         overflow-y: auto;
         font-size: 12px;
     }
+
+    .todos li div {
+        width: 320px;
+    }
+
+    input[type="time"] {
+        display: flex;
+        padding: 0px 0px 0px 4px;
+        width: 68px;
+        border: none;
+        background-color: transparent;
+    }
+
     .todos span::-webkit-scrollbar {
         width: 8px;
     }
@@ -405,6 +416,7 @@ li > div > span {
     #remaining-tasks {
         padding: 0;
     }
+
 }
 @keyframes appear{
     from {

@@ -8,7 +8,6 @@
     gap: 20px;
     width: 800px;
     height: auto;
-    max-height: 340px;
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.281);
     justify-content: center;
     border-radius: 4px 4px 4px 4px;
@@ -76,8 +75,8 @@ input[type="checkbox"] {
     appearance: none;
     background-color: transparent;
     margin: 0;
-    width: 1.5rem;
-    height: 1.5rem;
+    width: 20px;
+    height: 20px;
     border: 2px solid rgba(0, 0, 0, 0.603);
     border-radius: 4px;
     display: grid;
@@ -99,7 +98,6 @@ input[type="checkbox"]:checked::before {
 input[type="time"] {
     display: flex;
     padding: 0px 0px 0px 4px;
-    min-width: 72px;
     border: none;
     background-color: transparent;
 }
@@ -122,8 +120,7 @@ input[type="time"]:focus {
 .todos li span {
     padding: 4px;
     border-radius: 4px;
-    transition: all .2s ease-in-out;
-    width: 204px;
+    transition: all .2s ease-in-out;    
     max-height: 60px;
     font-size: 12px;
     overflow-x: hidden;
@@ -251,10 +248,6 @@ li > div > span {
         margin: 0 auto;
     }
 
-    .todos li {
-        width: 400px;
-    }
-
     #data {
         font-size: 20px !important;
         height: 32px !important;
@@ -365,7 +358,7 @@ li > div > span {
         padding: 4px;
         border-radius: 4px;
         transition: all .2s ease-in-out;
-        width: 172px;
+        width: 168px;
         max-height: 80px;
         overflow-y: auto;
         font-size: 12px;

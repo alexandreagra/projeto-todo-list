@@ -163,10 +163,10 @@ function createTask(task) {
     task.name
   }</span>
   <input class="timer" type="time">
+  <button title="Remove "${task.name}" task" class="remove-task">
+  <box-icon name='x' size="28px" color="#FE2E34"></box-icon></box-icon> 
+  </button>
               </div>
-              <button title="Remove "${task.name}" task" class="remove-task">
-              <box-icon name='x' size="28px" color="#FE2E34"></box-icon></box-icon> 
-              </button>
   `;
 
   novaTask.innerHTML = novaTaskMarcada;

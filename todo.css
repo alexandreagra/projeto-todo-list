@@ -46,6 +46,7 @@
     background-color: rgba(255, 255, 255, 0.877);
     list-style: none;
     border-radius: 0px;
+    max-width: 400px;
     padding: 20px;
     height: 80px;
     word-break: break-all;

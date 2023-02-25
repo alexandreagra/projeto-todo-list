@@ -291,6 +291,10 @@ li > div > span {
         width: 800px;
         margin: 0 auto;
     }
+
+    .todos li {
+        width: 400px;
+    }
     
     #data {
         font-size: 20px !important;
@@ -415,6 +419,7 @@ li > div > span {
     .todos li {  
         align-items: center;
         overflow: hidden;
+        width: 360px;
     }
 
     .todos li span {

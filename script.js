@@ -138,8 +138,8 @@ todoList.addEventListener("keydown", (e) => {
   }
 });
 
-todoList.addEventListener("input", (e) => {
-  const taskId = e.target.closest("li").id;
+todoList.addEventListener("click", (e) => {
+  const taskId = e.target.closest("input").id;
 
   updateTask(taskId, e.target);
 });

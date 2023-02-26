@@ -16,97 +16,74 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    margin: 0 20px;
+    margin: 0 auto;
 }
 
-.app-boas-vindas h1 {
-    font-size: 60px;
-    margin: 0;
-    padding: 12px;
-}
-
-#data-hora {
+.app-boas-vindas {
     display: flex;
-    flex-direction: column-reverse;
-    align-items: flex-end;
-    justify-content: space-between;
-    animation: fromright;
-    animation-duration: 1s;
+    align-items: flex-start;
 }
 
 .titulo {
     display: flex;
-    font-size: 36px;
+    font-size: 40px;
+    align-items: center;
+    justify-content: flex-end;
     font-weight: 700;
-    margin-bottom: 20px;
+    margin: 0 auto;
     animation: topbottom;
     animation-duration: 1s;
+    padding: 20px;
 }
 
+#data-hora {
+    display: grid;
+    grid-template-columns: 100%;
+    padding: 20px;
+    justify-content: space-between;
+    animation: fromright;
+    animation-duration: 1s;
+}
 
 #data {
     display: flex;
     text-align: center;
     align-items: center;
     justify-content: center;
-    font-size: 24px;
-    margin: 24px 32px 8px 32px;
-    height: 48px;
-    width: 334px;
-    letter-spacing: 12px;
-    text-indent: 12px;
-    text-transform: uppercase;
-    border-radius: 4px;
-    font-weight: 600;
+    font-size: 16px;
+    margin: 0 auto;
+    letter-spacing: 8px;
+    text-indent: 8px;
+    font-weight: 500;
 }
 
 #relogio {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
     text-align: center;
-    margin: 20px 32px;
-    font-size: 40px;
-    height: 100%;
-    width: 340px;
-    position: static;
+    margin: 0 auto;
+    padding: 12px;
+    font-size: 20px;
     background-color: transparent !important;
+    font-weight: 400;
 }
 
 #dia-semana {
+    font-family: 'Inter', cursive;
     font-size: 20px;
-    letter-spacing: 24px;
-    text-indent: 24px;
     display: flex;
+    margin: 0 auto;
+    padding: 12px;
     align-items: center;
     justify-content: center;
-    color: rgba(82, 219, 123, 0.603);
-    text-transform: uppercase;
-    font-weight: 800;
-    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.322);
+    color: rgb(0, 0, 0);
+    font-weight: 500;
+    text-shadow: 1px 2px 2px rgba(0, 0, 0, 0.486);
 }
 
-#horas {
-    background-color: rgba(255, 255, 255, 0.031);
-    padding: 8px 12px;
+#horas, #minutos, #segundos {
+    background-color: transparent;
     border-radius: 4px;
-    box-shadow: 2px 1px 16px rgba(0, 0, 0, 0.199);
-}
-
-#minutos {
-    background-color: rgba(255, 255, 255, 0.031);
     padding: 8px 12px;
-    border-radius: 4px;
-    box-shadow: 2px 1px 16px rgba(0, 0, 0, 0.199);
-}
-
-#segundos {
-    background-color: rgba(255, 255, 255, 0.031);
-    padding: 8px 12px;
-    border-radius: 4px;
-    box-shadow: 2px 1px 16px rgba(0, 0, 0, 0.199);
+    box-shadow: -1px -1px 3px rgba(0, 0, 0, 0.199);
 }
 
 .pontos {
@@ -117,38 +94,517 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    text-align: center;
     justify-content: center;
-    margin: auto;
-    margin-bottom: 68px;
-    font-size: 48px;
-    padding: 12px;
-    height: 80px;
-    gap: 40px;
-    font-family: 'Quicksand', sans-serif;
-    font-weight: 400;
+    margin: 0 auto;
+    font-size: 40px;
+    padding: 20px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
     animation: appear;
-    animation-duration: 4s;
-    border-radius: 50%;
+    animation-duration: 2s;
 }
 
 .textinho box-icon {
-    width: 60px;
-    height: 60px;
+    margin-bottom: 16px;
 }
 
 .titulo-cor {
     color: rgba(82, 219, 123, 0.712);
-    margin-right: 8px ;
+    margin-right: 8px;
 }
 
-@media (max-width: 1200px) {
-    #cabecalho {
-        flex-direction: column;
-        align-items: center;
+#main-header {
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
+    animation: appear;
+    animation-duration: 1s;
+}
+
+.primeiro-titulo-header {
+    font-size: 36px;
+    font-weight: 400;
+}
+#todo-form { 
+    display: flex;
+    gap: 8px;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 1000px;
+}
+
+#todo-form input {
+    padding: 12px;
+    font-size: 12px;
+    border: none;
+    border-radius: 4px;
+    background-color: rgba(255, 255, 255, 0.877);
+    width: 840px;
+}
+#todo-form input:focus {
+    outline: 2px solid rgba(82, 219, 123, 0.712);
+}
+
+#todo-form button {
+    width: 80px;
+    padding: 12px;
+    font-size: 12px;
+    background-color: rgba(255, 255, 255, 0.877);
+    color: black;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+#todo-form button:hover {
+    transition: all .2s ease-out;
+    transform: scale(1.1);
+    border: 1px solid black;
+    background-color: rgb(173, 202, 230);
+}
+
+.todos {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    gap: 20px;
+    width: 1000px;
+    height: auto;
+    max-height: 380px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.281);
+    justify-content: center;
+    border-radius: 4px 4px 4px 4px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    margin: 0 auto;
+    padding: 0;
+    animation: appear;
+    animation-duration: 1s; 
+}
+.todos::-webkit-scrollbar {
+    width: 16px;
+}
+.todos::-webkit-scrollbar-thumb {
+    background-color: rgba(82, 219, 123, 0.712);
+    border-radius: 0px 4px 4px 0px;
+}
+.todos::-webkit-scrollbar-track {
+    background: transparent;
+}
+.tarefa {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: #f5f5f5;
+}
+.todos li {
+    background-color: rgba(255, 255, 255, 0.877);
+    list-style: none;
+    border-radius: 0px;
+    width: 480px;
+    padding: 20px;
+    margin: 0 auto;
+    height: 80px;
+    word-break: break-all;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    text-align: justify;
+}
+.todos li div{
+    display: flex;
+    align-items: center;
+    justify-content: center;    
+    gap: 4px;
+    margin: 0 auto;
+}
+.todos li.complete {
+    background-color: rgb(173, 202, 230);
+    text-decoration: line-through;
+    color: rgb(66, 118, 197);
+}
+.todos li span::-webkit-scrollbar {
+    width: 16px;
+}
+.todos li span::-webkit-scrollbar-thumb {
+    background-color: rgba(82, 219, 123, 0.712);
+    border-radius: 8px;
+}
+.todos li span::-webkit-scrollbar-track {
+    background: transparent;
+    border-radius: 0px;
+}
+input[type="checkbox"] {
+    appearance: none;
+    background-color: transparent;
+    margin: 0;
+    width: 20px;
+    height: 20px;
+    border: 2px solid rgba(0, 0, 0, 0.603);
+    border-radius: 4px;
+    display: grid;
+    place-content: center;
+    transition: all .2s ease-in-out;
+}
+input[type="checkbox"]::before {
+    content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' style='fill: rgba(0, 0, 0, 1);transform: ;msFilter:;'%3E%3Cpath d='m10 15.586-3.293-3.293-1.414 1.414L10 18.414l9.707-9.707-1.414-1.414z'%3E%3C/path%3E%3C/svg%3E");
+    transform: scale(0);
+    transition: all .2s ease-in-out;
+}
+input[type="checkbox"]:checked {
+    background-color: rgba(82, 219, 123, 0.712);
+    border-color: darkblue;
+}
+input[type="checkbox"]:checked::before {
+    transform: scale(1);
+}
+input[type="time"] {
+    display: flex;
+    padding: 0px 0px 0px 4px;
+    width: 72px;
+    border: none;
+    background-color: transparent;
+}
+
+input[type="time"]:focus {
+    outline: 2px solid rgba(82, 219, 123, 0.712);
+}
+.todos li button {   
+    padding: 0;
+    display: grid;
+    place-content: center;
+    background-color: transparent;
+    font-weight: 500;
+    position: relative;
+    cursor: pointer;
+    border: none;
+}
+.todos li button:hover {
+    transform: scale(.8);
+}
+.todos li span {
+    padding: 4px;
+    border-radius: 4px;
+    transition: all .2s ease-in-out;    
+    width: 300px;
+    max-height: 60px;
+    font-size: 12px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+.todos li span:focus {
+    background-color: rgba(82, 219, 123, 0.274);
+    outline: none;
+    border-radius: 4px;
+}
+
+.stats {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 1000px;
+    margin: 0 auto;
+    margin-top: 16px;
+    list-style: none;
+    padding: 0;
+    animation: appear;
+    animation-duration: 1s;
+}
+.stats #remaining-tasks {
+    background-color:rgba(243, 131, 3, 0.856) ;
+    padding: 4px 8px;
+    border-radius: 4px;
+}
+.stats #completed-tasks {
+    background-color: rgba(82, 219, 123, 0.712);
+    padding: 4px 8px;
+    border-radius: 4px;
+}
+.stats #total-tasks {
+    background-color:rgba(183, 31, 221, 0.541) ;
+    padding: 4px 8px;
+    border-radius: 4px;
+}
+.resetar {
+    width: 80px;
+    font-size: 12px;
+    background-color: rgba(255, 255, 255, 0.877);
+    border: none;
+    border-radius: 4px;
+    padding: 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    color: black;
+}
+.resetar:hover {
+    transition: all .2s ease-out;
+    transform: scale(1.1);
+    border: 1px solid black;
+    background-color: #f07a7a;
+}
+@media (min-width: 800px) and (max-width: 1200px) {
+    .titulo {
+        margin: 16px 0;
+        padding: 12px;
+    }
+    .todo-form {
+        width: 200px;
+        margin-right: 52px;
+    }
+    #relogio {
+        display: none !important;
+    }
+    
+    .todos {
+        display: grid;  
+        grid-template-columns: 50% 50%;
+        width: 800px;
+        height: auto;
+        max-height: 800px;
     }
 
-    .titulo {
-        font-size: 32px !important;
+    .todos li {  
+        align-items: center;
+        overflow: hidden;
+        max-width: 400px;
+        height: 80px;
+    }
+
+    .todos li button {
+        padding: 0;
+        margin: 0;
+    }
+
+    .todos li span {
+        border-radius: 4px;
+        transition: all .2s ease-in-out;
+        width: 220px;
+        overflow-y: auto;
+        font-size: 12px;
+    }
+
+    .todos li div {
+        width: 400px;
+        gap: 4px;
+    }
+
+    input[type="time"] {
+        display: flex;
+        padding: 0px 0px 0px 4px;
+        width: 72px;
+        border: none;
+        background-color: transparent;
+    }
+
+    .todos li span::-webkit-scrollbar {
+        width: 8px;
+    }
+
+    #data {
+        font-size: 20px !important;
+        height: 32px !important;
+    }
+    .textinho {
+        font-size: 32px !important;;
+        height: 24px;
+        margin-bottom: 0 !important;
+        margin-top: 28px !important;
+        gap: 16px !important;
+    }
+    #main-container {
+        width: 800px;
+        margin: 0 auto;
+    }
+    .stats {       
+        margin: 20px auto;
+        gap: 36px;
+    }
+    #todo-form button:hover {
+        transform: scale(1);
+        border: none !important;
+        background-color: #ffffffe0 !important;
+    }
+    .resetar:hover {
+        transition: all .2s ease-out;
+        transform: scale(1);
+        border: none;
+        background-color: #ffffffe0;
+    }
+}
+@media (min-width: 360px) and (max-width: 800px) {
+    .todo-form {
+        width: 200px;
+        margin-right: 52px;
+    }
+    .botao-add:focus {
+        outline:0;
+    }
+    .botao-add:active {
+        background-color: none;
+    }
+    
+    .resetar:focus {
+        outline:0;
+    }
+    #data {
+        font-size: 16px !important;
+        height: 32px !important;
+    }
+    .textinho {
+        font-size: 24px !important;;
+        height: 24px;
+        margin-bottom: 0 !important;
+        margin-top: 20px !important;
+        gap: 16px !important;
+    }
+    #relogio {
+        display: none !important;
+    }
+    #data-hora {
+        animation: none !important;
+    }
+    #main-header {
+        width: 360px;
+        justify-content: center;
+        margin: 0 auto;
+        gap: 12px;
+    }
+    .stats {
+        margin: 12px 0;
+        justify-content: center;
+        font-size: 12px;
+        width: 400px;
+        gap: 12px;
+    }
+    .stats li {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 4px;
+    }
+    .stats #remaining-tasks {
+        padding: 4px 8px;
+    }
+    .stats #completed-tasks {
+        padding: 4px 8px;
+    }
+    .stats #total-tasks {
+        padding: 4px 8px;
+    }
+    .primeiro-titulo-header {
+        font-size: 20px;
+    }
+
+    .todos ul {
+        margin: 0 auto;
+    }
+    .todos {
+        display: grid;  
+        grid-template-columns: 100%;
+        width: 360px;
+        max-height: 320px;
+    }
+    .todos li {  
+        align-items: center;
+        overflow: hidden;
+        max-width: 360px;
+        height: 92px;
+    }
+
+    .todos li button {
+        padding: 0;
+        margin: 0;
+    }
+
+    .todos li span {
+        border-radius: 4px;
+        transition: all .2s ease-in-out;
+        width: 192px;
+        overflow-y: auto;
+        font-size: 12px;
+    }
+
+    .todos li div {
+        width: 400px;
+        gap: 4px;
+    }
+
+    input[type="time"] {
+        display: flex;
+        padding: 0px 0px 0px 4px;
+        width: 72px;
+        border: none;
+        background-color: transparent;
+    }
+
+    .todos li span::-webkit-scrollbar {
+        width: 8px;
+    }
+    
+    .todos span::-webkit-scrollbar-thumb {
+        background-color: rgba(82, 219, 123, 0.712);
+        border-radius: 4px 4px 4px 4px;
+    }
+    
+    .todos span::-webkit-scrollbar-track {
+        background: transparent;
+    }
+    #todo-form input {
+        width: 200px;
+        padding: 12px;
+        font-size: 12px;
+        border: none;
+        border-radius: 4px;
+    }
+    
+    #todo-form button {
+        width: 80px;
+        padding: 12px;
+        font-size: 12px;
+        background-color: white;
+        color: black;
+    }
+    #todo-form button:hover {
+        transform: scale(1);
+        border: none !important;
+        background-color: #ffffffe0 !important;
+    }
+    .resetar:hover {
+        transition: all .2s ease-out;
+        transform: scale(1);
+        border: none;
+        background-color: #ffffffe0;
+    }
+    #remaining-tasks {
+        padding: 0;
+    }
+
+}
+@keyframes appear{
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+@keyframes topbottom{
+    from {
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(0%);
+    }
+}
+@keyframes fromright {
+    from {
+        transform: translateX(100%);
+    } to {
+        transform: translateX(0%);
     }
 }

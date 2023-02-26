@@ -10,7 +10,21 @@ function displayDate() {
 function displayDia() {
   let dia = new Date();
   dia = dia.toString().split(" ");
-  dia = dia[0];
+  if ((dia = dia[0] === "Sun")) {
+    dia = "Sunday";
+  } else if ((dia = dia[0] === "Mon")) {
+    dia = "Monday";
+  } else if ((dia = dia[0] === "Tue")) {
+    dia = "Tuesday";
+  } else if ((dia = dia[0] === "Wed")) {
+    dia = "Wednesday";
+  } else if ((dia = dia[0] === "Thu")) {
+    dia = "Thursday";
+  } else if ((dia = dia[0] === "Fri")) {
+    dia = "Friday";
+  } else {
+    return (dia = dia[0]);
+  }
   document.querySelector("#dia-semana").innerHTML = dia;
 }
 
@@ -51,7 +65,7 @@ function textos() {
 
   if (horaAtual >= 00 && horaAtual < 12) {
     textinho.innerHTML = `<box-icon name='sun' color='black' size='lg'></box-icon>Good morning!`;
-    document.body.style.backgroundColor = "#E1E6E5";
+    document.body.style.backgroundColor = "#CFF2FC";
   } else if (horaAtual >= 12 && horaAtual < 18) {
     textinho.innerHTML = `<box-icon type='solid' name='sun' color='yellow' size='lg'></box-icon>Good afternoon!`;
     document.body.style.backgroundColor = "#B9DBE9";

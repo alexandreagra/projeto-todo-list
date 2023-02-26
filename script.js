@@ -162,7 +162,7 @@ function createTask(task) {
                 <span ${!task.isCompleted ? "contenteditable" : ""}>${
     task.name
   }</span>
-  <input class="timer" type="time" value="">
+  <input class="timer" type="time" value="00:00">
   <button title="Remove "${task.name}" task" class="remove-task">
   <box-icon name='x' size="28px" color="#FE2E34"></box-icon></box-icon> 
   </button>

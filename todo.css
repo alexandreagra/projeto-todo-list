@@ -370,7 +370,7 @@ li > div > span {
     input[type="time"] {
         display: flex;
         padding: 0px 0px 0px 4px;
-        width: 68px;
+        width: 72px;
         border: none;
         background-color: transparent;
     }

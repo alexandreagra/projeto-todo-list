@@ -273,7 +273,7 @@ li > div > span {
     .todos li span {
         border-radius: 4px;
         transition: all .2s ease-in-out;
-        width: 192px;
+        width: 220px;
         overflow-y: auto;
         font-size: 12px;
     }

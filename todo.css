@@ -360,7 +360,7 @@ li > div > span {
         transition: all .2s ease-in-out;
         width: 168px;
         overflow-y: auto;
-        font-size: 12px;
+        font-size: 16px;
     }
 
     .todos li div {

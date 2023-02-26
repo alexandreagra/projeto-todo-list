@@ -363,13 +363,14 @@ li > div > span {
     .todos li span {
         border-radius: 4px;
         transition: all .2s ease-in-out;
-        width: 168px;
+        width: 192px;
         overflow-y: auto;
-        font-size: 16px;
+        font-size: 12px;
     }
 
     .todos li div {
         width: 400px;
+        gap: 4px;
     }
 
     input[type="time"] {

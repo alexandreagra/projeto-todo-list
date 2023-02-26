@@ -285,6 +285,10 @@ li > div > span {
         background-color: transparent;
     }
 
+    .todos li span::-webkit-scrollbar {
+        width: 8px;
+    }
+
     #data {
         font-size: 20px !important;
         height: 32px !important;
@@ -415,6 +419,10 @@ li > div > span {
         width: 72px;
         border: none;
         background-color: transparent;
+    }
+
+    .todos li span::-webkit-scrollbar {
+        width: 8px;
     }
 
     .todos span::-webkit-scrollbar {

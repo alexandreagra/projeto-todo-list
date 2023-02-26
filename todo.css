@@ -255,7 +255,7 @@ li > div > span {
         grid-template-columns: 50% 50%;
         width: 800px;
         height: auto;
-        max-height: 320px;
+        max-height: 800px;
     }
 
     .todos li {  
@@ -273,7 +273,7 @@ li > div > span {
     .todos li span {
         border-radius: 4px;
         transition: all .2s ease-in-out;
-        width: 240px;
+        width: 228px;
         overflow-y: auto;
         font-size: 12px;
     }

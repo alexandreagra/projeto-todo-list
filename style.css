@@ -50,7 +50,7 @@ body {
     text-align: center;
     align-items: center;
     justify-content: center;
-    font-size: 16px;
+    font-size: 20px;
     margin: 0 auto;
     letter-spacing: 8px;
     text-indent: 8px;
@@ -61,14 +61,14 @@ body {
     text-align: center;
     margin: 0 auto;
     padding: 12px;
-    font-size: 20px;
+    font-size: 24px;
     background-color: transparent !important;
     font-weight: 400;
 }
 
 #dia-semana {
     font-family: 'Inter', cursive;
-    font-size: 20px;
+    font-size: 24px;
     display: flex;
     margin: 0 auto;
     padding: 12px;
@@ -83,7 +83,7 @@ body {
     background-color: transparent;
     border-radius: 4px;
     padding: 8px 12px;
-    box-shadow: -1px -1px 3px rgba(0, 0, 0, 0.199);
+    box-shadow: -1px -1px 3px rgba(0, 0, 0, 0.199), 1px 1px 3px rgba(0, 0, 0, 0.199);
 }
 
 .pontos {

@@ -343,16 +343,16 @@ li > div > span {
         font-size: 20px;
     }
     .todos {
-        display: flex;  
-        flex-direction: column;
+        display: grid;  
+        grid-template-columns: 100%;
         width: 360px;
-        max-height: 300px
+        max-height: 320px;
     }
     .todos li {  
         align-items: center;
         overflow: hidden;
         max-width: 360px;
-        min-height: 60px;
+        height: 60px;
     }
 
     .todos li span {

@@ -1,0 +1,32 @@
+.todos li {  
+    align-items: center;
+    overflow: hidden;
+    max-width: 360px;
+    height: 92px;
+}
+
+.todos li button {
+    padding: 0;
+    margin: 0;
+}
+
+.todos li span {
+    border-radius: 4px;
+    transition: all .2s ease-in-out;
+    width: 192px;
+    overflow-y: auto;
+    font-size: 12px;
+}
+
+.todos li div {
+    width: 400px;
+    gap: 4px;
+}
+
+input[type="time"] {
+    display: flex;
+    padding: 0px 0px 0px 4px;
+    width: 72px;
+    border: none;
+    background-color: transparent;
+}

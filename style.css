@@ -530,7 +530,7 @@ input[type="checkbox"]::before {
         grid-template-columns: 100%;
         width: 372px;
         height: auto;
-        max-height: 360px;
+        max-height: 368px;
     }
     .todos li {  
         align-items: center;

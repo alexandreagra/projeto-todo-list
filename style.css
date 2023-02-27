@@ -459,9 +459,35 @@ input[type="checkbox"]::before {
         justify-content: center;
         user-select: none;
     }
+
+    .textinho {
+        font-size: 28px;
+        gap: 16px !important;
+        padding: 0;
+        margin: 0 auto;
+    }
     
     .textinho box-icon {
         margin: 0;
+    }
+
+    #relogio {
+        display: none;
+    }
+
+    #data-hora {
+        display: none;
+    }
+
+    #main-header {
+        width: 372px;
+        justify-content: space-between;
+        margin: 0 auto;
+        gap: 4px;
+    }
+
+    .primeiro-titulo-header {
+        font-size: 20px;
     }
     
     #todo-form {
@@ -469,14 +495,14 @@ input[type="checkbox"]::before {
         flex-direction: row;
         align-items: center;
         justify-content: space-between;
-        width: 380px;
+        width: 372px;
         gap: 0;
         margin: 0 auto !important;
         margin-bottom: 16px !important;
     }
     
     #todo-form input {
-        width: 220px;
+        width: 216px;
         padding: 12px;
         font-size: 12px;
         border: none;
@@ -498,47 +524,18 @@ input[type="checkbox"]::before {
     .botao-add:active {
         background-color: none;
     }
-
-    #data {
-        font-size: 16px !important;
-    }
-
-    .textinho {
-        font-size: 28px;
-        gap: 16px !important;
-        padding: 0;
-        margin: 0 auto;
-    }
-
-    #relogio {
-        display: none;
-    }
-
-    #data-hora {
-        display: none;
-    }
-
-    #main-header {
-        width: 380px;
-        justify-content: space-between;
-        margin: 0 auto;
-        gap: 4px;
-    }
-    .primeiro-titulo-header {
-        font-size: 20px;
-    }
     
     .todos {
         display: grid;
         grid-template-columns: 100%;
-        width: 380px;
+        width: 372px;
         height: auto;
         max-height: 360px;
     }
     .todos li {  
         align-items: center;
         overflow: hidden;
-        width: 380px;
+        width: 372px;
         height: 80px;
     }
     
@@ -554,7 +551,7 @@ input[type="checkbox"]::before {
     .todos li span {
         border-radius: 4px;
         transition: all .2s ease-in-out;
-        width: 260px;
+        width: 252px;
         overflow-y: auto;
         font-size: 12px;
     }
@@ -571,11 +568,13 @@ input[type="checkbox"]::before {
     .todos span::-webkit-scrollbar-track {
         background: transparent;
     }
+
     #todo-form button:hover {
         transform: scale(1);
         border: none !important;
         background-color: #ffffffe0 !important;
     }
+
     .resetar:hover {
         transition: all .2s ease-out;
         transform: scale(1);
@@ -586,8 +585,9 @@ input[type="checkbox"]::before {
     .stats {
         justify-content: space-between;
         font-size: 12px;
-        width: 380px;
+        width: 372px;
     }
+    
     .stats li {
         display: flex;
         align-items: center;

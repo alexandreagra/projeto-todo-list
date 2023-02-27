@@ -10,21 +10,24 @@ function displayDate() {
 function displayDia() {
   let dia = new Date();
   dia = dia.toString().split(" ");
-  if ((dia = dia[0] === "Sun")) {
-    dia = "Sunday";
-  } else if ((dia = dia[0] === "Mon")) {
-    dia = "Monday";
-  } else if ((dia = dia[0] === "Tue")) {
-    dia = "Tuesday";
-  } else if ((dia = dia[0] === "Wed")) {
-    dia = "Wednesday";
-  } else if ((dia = dia[0] === "Thu")) {
-    dia = "Thursday";
-  } else if ((dia = dia[0] === "Fri")) {
-    dia = "Friday";
-  } else {
-    return (dia = dia[0]);
-  }
+  dia = dia[0]
+
+    if (dia === "Mon") {
+      dia = "Monday"
+    } else if (dia === "Tue") {
+      dia = "Tuesday"
+    } else if (dia === "Wed") {
+      dia = "Wednesday"
+    } else if (dia === "Thu") {
+      dia = "Thursday"
+    } else if (dia === "Fri") {
+      dia = "Friday"
+    } else if (dia === "Sat") {
+      dia = "Saturday"
+    } else if (dia === "Sun") {
+      dia = "Sunday"
+    }
+
   document.querySelector("#dia-semana").innerHTML = dia;
 }
 
@@ -78,6 +81,7 @@ function textos() {
     document.querySelector(".titulo").style.color = "#ffffffe0";
     document.querySelector(".primeiro-titulo-header").style.color = "#ffffffe0";
     document.querySelector(".stats").style.color = "#ffffffe0";
+    document.querySelector("#dia-semana").style.color = "#ffffffe0";
   }
 }
 
@@ -93,6 +97,7 @@ const remainingTasks = document.querySelector("#remaining-tasks");
 const mainInput = document.querySelector("#todo-form input");
 const resetAll = document.querySelector(".resetar");
 const addButton = document.querySelector(".botao-add");
+
 
 let tasks = JSON.parse(localStorage.getItem("tasks")) || [];
 
@@ -115,7 +120,7 @@ todoForm.addEventListener("submit", (e) => {
   const task = {
     id: new Date().getTime(),
     name: inputValue,
-    isCompleted: false,
+    isCompleted: false
   };
 
   tasks.push(task);
@@ -153,7 +158,7 @@ todoList.addEventListener("keydown", (e) => {
 });
 
 todoList.addEventListener("input", (e) => {
-  const taskId = e.target.closest("input").id;
+  const taskId = e.target.closest("li").id;
 
   updateTask(taskId, e.target);
 });
@@ -170,15 +175,12 @@ function createTask(task) {
 
   const novaTaskMarcada = `
   <div>
-                <input type="checkbox" name="tasks" id="${task.id}" ${
-    task.isCompleted ? "checked" : ""
-  }>
+                <input type="checkbox" name="tasks" id="${task.id}" ${task.isCompleted ? "checked" : ""}>
                 <span ${!task.isCompleted ? "contenteditable" : ""}>${
     task.name
   }</span>
-  <input class="timer" type="time" value="00:00">
   <button title="Remove "${task.name}" task" class="remove-task">
-  <box-icon name='x' size="28px" color="#FE2E34"></box-icon></box-icon> 
+  <box-icon name='x' size="28px" color="#000"></box-icon>
   </button>
               </div>
   `;

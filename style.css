@@ -15,8 +15,9 @@ body {
 #cabecalho {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
-    margin: 0 auto;
+    justify-content: space-between;
+    margin-bottom: 40px;
+    user-select: none;
 }
 
 .app-boas-vindas {
@@ -31,6 +32,7 @@ body {
     justify-content: flex-end;
     font-weight: 700;
     margin: 0 auto;
+    width: 310px;
     animation: topbottom;
     animation-duration: 1s;
     padding: 20px;
@@ -40,6 +42,7 @@ body {
     display: grid;
     grid-template-columns: 100%;
     padding: 20px;
+    width: 310px;
     justify-content: space-between;
     animation: fromright;
     animation-duration: 1s;
@@ -68,7 +71,7 @@ body {
 
 #dia-semana {
     font-family: 'Inter', cursive;
-    font-size: 24px;
+    font-size: 32px;
     display: flex;
     margin: 0 auto;
     padding: 12px;
@@ -95,8 +98,7 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin: 0 auto;
-    font-size: 40px;
+    font-size: 52px;
     padding: 20px;
     font-family: 'Inter', sans-serif;
     font-weight: 700;
@@ -105,7 +107,7 @@ body {
 }
 
 .textinho box-icon {
-    margin-bottom: 16px;
+    margin-bottom: 32px;
 }
 
 .titulo-cor {
@@ -119,9 +121,12 @@ body {
     margin: 0 auto;
     animation: appear;
     animation-duration: 1s;
+    margin-top: 40px;
+    margin-bottom: 16px;
 }
 
 .primeiro-titulo-header {
+    margin: 0;
     font-size: 36px;
     font-weight: 400;
 }
@@ -135,14 +140,15 @@ body {
     max-width: 1000px;
 }
 
-#todo-form input {
+#todo-form input { 
     padding: 12px;
     font-size: 12px;
     border: none;
     border-radius: 4px;
     background-color: rgba(255, 255, 255, 0.877);
-    width: 840px;
+    width: 808px;
 }
+
 #todo-form input:focus {
     outline: 2px solid rgba(82, 219, 123, 0.712);
 }
@@ -166,14 +172,14 @@ body {
 
 .todos {
     display: grid;
-    grid-template-columns: 50% 50%;
-    gap: 20px;
+    grid-template-columns: 49% 49%;
     width: 1000px;
     height: auto;
-    max-height: 380px;
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.281);
-    justify-content: center;
-    border-radius: 4px 4px 4px 4px;
+    max-height: 392px;
+    box-shadow: -4px -4px 20px rgba(0, 0, 0, 0.060), 4px 4px 20px rgba(0, 0, 0, 0.060);
+    justify-content: space-between;
+    gap: 16px;
+    border-radius: 4px;
     overflow-x: hidden;
     overflow-y: auto;
     margin: 0 auto;
@@ -182,7 +188,7 @@ body {
     animation-duration: 1s; 
 }
 .todos::-webkit-scrollbar {
-    width: 16px;
+    width: 12px;
 }
 .todos::-webkit-scrollbar-thumb {
     background-color: rgba(82, 219, 123, 0.712);
@@ -202,10 +208,10 @@ body {
     background-color: rgba(255, 255, 255, 0.877);
     list-style: none;
     border-radius: 0px;
-    width: 480px;
     padding: 20px;
+    width: 492px;
     margin: 0 auto;
-    height: 80px;
+    height: 120px;
     word-break: break-all;
     overflow-x: hidden;
     overflow-y: hidden;
@@ -213,13 +219,13 @@ body {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    text-align: justify;
 }
 .todos li div{
+    margin: 0;
     display: flex;
     align-items: center;
     justify-content: center;    
-    gap: 4px;
+    gap: 8px;
     margin: 0 auto;
 }
 .todos li.complete {
@@ -238,18 +244,19 @@ body {
     background: transparent;
     border-radius: 0px;
 }
+
 input[type="checkbox"] {
     appearance: none;
     background-color: transparent;
     margin: 0;
-    width: 20px;
-    height: 20px;
+    width: 28px;
+    height: 28px;
     border: 2px solid rgba(0, 0, 0, 0.603);
     border-radius: 4px;
     display: grid;
-    place-content: center;
     transition: all .2s ease-in-out;
 }
+
 input[type="checkbox"]::before {
     content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' style='fill: rgba(0, 0, 0, 1);transform: ;msFilter:;'%3E%3Cpath d='m10 15.586-3.293-3.293-1.414 1.414L10 18.414l9.707-9.707-1.414-1.414z'%3E%3C/path%3E%3C/svg%3E");
     transform: scale(0);
@@ -262,17 +269,7 @@ input[type="checkbox"]:checked {
 input[type="checkbox"]:checked::before {
     transform: scale(1);
 }
-input[type="time"] {
-    display: flex;
-    padding: 0px 0px 0px 4px;
-    width: 72px;
-    border: none;
-    background-color: transparent;
-}
 
-input[type="time"]:focus {
-    outline: 2px solid rgba(82, 219, 123, 0.712);
-}
 .todos li button {   
     padding: 0;
     display: grid;
@@ -290,9 +287,10 @@ input[type="time"]:focus {
     padding: 4px;
     border-radius: 4px;
     transition: all .2s ease-in-out;    
-    width: 300px;
-    max-height: 60px;
-    font-size: 12px;
+    width: 340px;
+    font-weight: 500;
+    max-height: 80px;
+    font-size: 20px;
     overflow-x: hidden;
     overflow-y: auto;
 }
@@ -347,17 +345,15 @@ input[type="time"]:focus {
     border: 1px solid black;
     background-color: #f07a7a;
 }
+
 @media (min-width: 800px) and (max-width: 1200px) {
-    .titulo {
-        margin: 16px 0;
-        padding: 12px;
+    
+    #todo-form {
+        width: 800px;
     }
-    .todo-form {
-        width: 200px;
-        margin-right: 52px;
-    }
-    #relogio {
-        display: none !important;
+
+    #todo-form input {
+        width: 608px;
     }
     
     .todos {
@@ -375,60 +371,57 @@ input[type="time"]:focus {
         height: 80px;
     }
 
-    .todos li button {
-        padding: 0;
-        margin: 0;
+    .todos li input[type=checkbox] {
+        width: 24px;
+        height: 24px;
+    }
+
+    input[type="checkbox"]::before {
+        content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24' style='fill: rgba(0, 0, 0, 1);transform: ;msFilter:;'%3E%3Cpath d='m10 15.586-3.293-3.293-1.414 1.414L10 18.414l9.707-9.707-1.414-1.414z'%3E%3C/path%3E%3C/svg%3E");
     }
 
     .todos li span {
         border-radius: 4px;
         transition: all .2s ease-in-out;
-        width: 220px;
+        width: 260px;
+        max-height: 60px;
         overflow-y: auto;
-        font-size: 12px;
-    }
-
-    .todos li div {
-        width: 400px;
-        gap: 4px;
-    }
-
-    input[type="time"] {
-        display: flex;
-        padding: 0px 0px 0px 4px;
-        width: 72px;
-        border: none;
-        background-color: transparent;
+        font-size: 16px;
     }
 
     .todos li span::-webkit-scrollbar {
         width: 8px;
     }
 
-    #data {
-        font-size: 20px !important;
-        height: 32px !important;
+    #todo-form button:hover {
+        transform: scale(1);
+        border: none !important;
+        background-color: #ffffffe0 !important;
     }
+    
+    #data {
+        font-size: 16px !important;
+    }
+
+    #dia-semana {
+        font-size: 24px;
+    }
+
+    #horas, #minutos, #segundos {
+        font-size: 16px;
+    }
+
     .textinho {
-        font-size: 32px !important;;
-        height: 24px;
-        margin-bottom: 0 !important;
-        margin-top: 28px !important;
-        gap: 16px !important;
+        font-size: 36px;
     }
     #main-container {
         width: 800px;
         margin: 0 auto;
     }
     .stats {       
-        margin: 20px auto;
-        gap: 36px;
+        width: 800px;
     }
-    #todo-form button:hover {
-        transform: scale(1);
-        border: none !important;
-        background-color: #ffffffe0 !important;
-    }
+    
     .resetar:hover {
         transition: all .2s ease-out;
         transform: scale(1);
@@ -532,14 +525,6 @@ input[type="time"]:focus {
     .todos li div {
         width: 400px;
         gap: 4px;
-    }
-
-    input[type="time"] {
-        display: flex;
-        padding: 0px 0px 0px 4px;
-        width: 72px;
-        border: none;
-        background-color: transparent;
     }
 
     .todos li span::-webkit-scrollbar {

@@ -20,30 +20,26 @@ body {
     user-select: none;
 }
 
-.app-boas-vindas {
-    display: flex;
-    align-items: flex-start;
-}
-
 .titulo {
     display: flex;
-    font-size: 40px;
-    align-items: center;
-    justify-content: flex-end;
+    margin: 0;
+    width: 380px;
+    font-size: 48px;
+    align-items: flex-start;
     font-weight: 700;
-    margin: 0 auto;
-    width: 310px;
     animation: topbottom;
+    justify-content: flex-end;
     animation-duration: 1s;
-    padding: 20px;
+    padding: 20px
 }
 
 #data-hora {
+    width: 380px;
     display: grid;
     grid-template-columns: 100%;
     padding: 20px;
-    width: 310px;
     justify-content: space-between;
+    justify-items: end;
     animation: fromright;
     animation-duration: 1s;
 }
@@ -98,7 +94,7 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    font-size: 52px;
+    font-size: 44px;
     padding: 20px;
     font-family: 'Inter', sans-serif;
     font-weight: 700;
@@ -108,6 +104,10 @@ body {
 
 .textinho box-icon {
     margin-bottom: 32px;
+}
+
+.textinho2 {
+    display: none;
 }
 
 .titulo-cor {
@@ -365,6 +365,27 @@ input[type="checkbox"]:checked::before {
     background-color: #f07a7a;
 }
 
+.bleng {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #ffab62;
+    width: 100%;
+    height: 28px;
+    position: fixed;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.466);
+}
+
+footer {
+    display: none;
+}
+
+footer p {
+    font-size: 12px;
+    color: white;
+}
+
 @keyframes appear{
     from {
         opacity: 0;
@@ -392,6 +413,12 @@ input[type="checkbox"]:checked::before {
 }
 
 @media (min-width: 800px) and (max-width: 1200px) {
+
+.titulo {
+    font-size: 40px;
+    justify-content: flex-start;
+    margin-left: 4px;
+}
     
 #todo-form {
     width: 800px;
@@ -457,7 +484,23 @@ input[type="checkbox"]::before {
 }
 
 .textinho {
-    font-size: 36px;
+    display: none;
+}
+
+.textinho2 {
+    font-size: 32px;
+    gap: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    margin-top: 40px;
+    padding: 20px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    animation: appear;
+    animation-duration: 2s;
 }
 
 #main-container {
@@ -480,16 +523,25 @@ input[type="checkbox"]::before {
 
 @media (min-width: 360px) and (max-width: 800px) {
 
+    .titulo {
+        justify-content: center;
+        justify-items: center;
+        margin: auto;
+        font-size: 40px;
+        padding-top: 12px !important;
+    }
+
     #cabecalho {
         display: flex;
         flex-direction: column;
         justify-content: center;
         user-select: none;
+        margin-bottom: 20px !important;
     }
 
     .textinho {
-        font-size: 28px;
-        gap: 16px !important;
+        font-size: 24px;
+        gap: 12px !important;
         padding: 0;
         margin: 0 auto;
     }

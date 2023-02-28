@@ -1,0 +1,23 @@
+{
+  "name": "projeto-todo-list",
+  "version": "1.0.0",
+  "description": "Projeto de uma To-do list com layout bem simples e diversas funcionalidades.",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alexandreagra/projeto-todo-list.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alexandreagra/projeto-todo-list/issues"
+  },
+  "homepage": "https://github.com/alexandreagra/projeto-todo-list#readme",
+  "dependencies": {
+    "boxicons": "^2.1.4"
+  }
+}

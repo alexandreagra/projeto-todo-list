@@ -65,15 +65,19 @@ function textos() {
   let horaAtual = horasExatas.getHours();
   horasExatas.getDate();
   let textinho = document.querySelector(".textinho");
+  let textinho2 = document.querySelector(".textinho2");
 
   if (horaAtual >= 00 && horaAtual < 12) {
-    textinho.innerHTML = `<box-icon name='sun' color='black' size='lg'></box-icon>Good morning!`;
+    textinho.innerHTML = `<box-icon name='sun' color='#FFEC00' size='60px'></box-icon>Good morning!`;
+    textinho2.innerHTML = `<box-icon name='sun' color='#FFEC00' size='60px'></box-icon>Good morning!`;
     document.body.style.backgroundColor = "#CFF2FC";
   } else if (horaAtual >= 12 && horaAtual < 18) {
     textinho.innerHTML = `<box-icon type='solid' name='sun' color='yellow' size='lg'></box-icon>Good afternoon!`;
+    textinho2.innerHTML = `<box-icon type='solid' name='sun' color='yellow' size='lg'></box-icon>Good afternoon!`;
     document.body.style.backgroundColor = "#B9DBE9";
   } else if (horaAtual >= 18 || horaAtual < 00) {
     textinho.innerHTML = `<box-icon  type='solid' name='moon' size='lg' color='#E5E5E5'></box-icon>Good evening!`;
+    textinho2.innerHTML = `<box-icon  type='solid' name='moon' size='lg' color='#E5E5E5'></box-icon>Good evening!`;
     document.body.style.backgroundColor = "#15253F";
     document.querySelector("#relogio").style.color = "#ffffffe0";
     document.querySelector("#data").style.color = "#ffffffe0";
@@ -97,6 +101,24 @@ const remainingTasks = document.querySelector("#remaining-tasks");
 const mainInput = document.querySelector("#todo-form input");
 const resetAll = document.querySelector(".resetar");
 const addButton = document.querySelector(".botao-add");
+
+function hideRodape() {
+  const rodape = document.querySelector("footer")
+  const selfHeight = window.innerHeight
+  const maxHeightAllowed = 740
+
+  if (selfHeight >= maxHeightAllowed) {
+    rodape.classList.add('bleng')
+  } else if (selfHeight <= maxHeightAllowed) {
+    rodape.classList.remove('bleng')
+  }
+  rodape = maxHeightAllowed
+}
+    
+hideRodape()
+
+
+//STORAGE SESSION
 
 
 let tasks = JSON.parse(localStorage.getItem("tasks")) || [];
@@ -180,7 +202,7 @@ function createTask(task) {
     task.name
   }</span>
   <button title="Remove "${task.name}" task" class="remove-task">
-  <box-icon name='x' size="28px" color="#000"></box-icon>
+  <box-icon name='x' size="32px" color="#000"></box-icon>
   </button>
               </div>
   `;

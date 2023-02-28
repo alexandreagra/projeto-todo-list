@@ -365,7 +365,7 @@ input[type="checkbox"]:checked::before {
     background-color: #f07a7a;
 }
 
-.bleng {
+footer {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -375,10 +375,6 @@ input[type="checkbox"]:checked::before {
     position: fixed;
     bottom: 0;
     background-color: rgba(0, 0, 0, 0.466);
-}
-
-footer {
-    display: none;
 }
 
 footer p {

@@ -114,8 +114,6 @@ function hideRodape() {
   }
   rodape = maxHeightAllowed
 }
-    
-hideRodape()
 
 
 //STORAGE SESSION

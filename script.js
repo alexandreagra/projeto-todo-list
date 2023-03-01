@@ -77,11 +77,12 @@ function textos() {
     document.body.style.backgroundColor = "#B9DBE9";
   } else if (horaAtual >= 18 || horaAtual < 00) {
     textinho.innerHTML = `<box-icon  type='solid' name='moon' size='lg' color='#E5E5E5'></box-icon>Good evening!`;
-    textinho2.innerHTML = `<box-icon  type='solid' name='moon' size='lg' color='#E5E5E5'></box-icon>Good evening!`;
+    textinho2.innerHTML = `<box-icon  type='solid' name='moon' size='lg' color='#C9CCCB'></box-icon>Good evening!`;
     document.body.style.backgroundColor = "#15253F";
     document.querySelector("#relogio").style.color = "#ffffffe0";
     document.querySelector("#data").style.color = "#ffffffe0";
     document.querySelector(".textinho").style.color = "#ffffffe0";
+    document.querySelector(".textinho2").style.color = "#C9CCCB";
     document.querySelector(".titulo").style.color = "#ffffffe0";
     document.querySelector(".primeiro-titulo-header").style.color = "#ffffffe0";
     document.querySelector(".stats").style.color = "#ffffffe0";
@@ -171,7 +172,7 @@ resetAll.addEventListener("click", (e) => {
 });
 
 todoList.addEventListener("keydown", (e) => {
-  if (e.keyCode === 13) {
+  if (e.keyCode === 13 && !e.shiftKey) {
     e.preventDefault();
     e.target.blur();
   }
@@ -200,7 +201,7 @@ function createTask(task) {
     task.name
   }</span>
   <button title="Remove "${task.name}" task" class="remove-task">
-  <box-icon name='x' size="32px" color="#000"></box-icon>
+  <box-icon name='x' size="28px" color="#FA3333"></box-icon>
   </button>
               </div>
   `;

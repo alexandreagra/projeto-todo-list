@@ -96,7 +96,7 @@ body {
     justify-content: center;
     font-size: 44px;
     padding: 20px;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Architects Daughter', cursive;
     font-weight: 700;
     animation: appear;
     animation-duration: 2s;
@@ -113,6 +113,7 @@ body {
 .titulo-cor {
     color: rgba(82, 219, 123, 0.712);
     margin-right: 8px;
+    font-family: 'Short Stack', cursive;
 }
 
 #main-header {
@@ -410,10 +411,18 @@ footer p {
 
 @media (min-width: 800px) and (max-width: 1200px) {
 
+#cabecalho {
+    margin-bottom: 0px !important;
+}
+
 .titulo {
     font-size: 40px;
     justify-content: flex-start;
     margin-left: 4px;
+}
+
+#relogio {
+    padding-top: 4px;
 }
     
 #todo-form {
@@ -429,14 +438,14 @@ footer p {
     grid-template-columns: 50% 50%;
     width: 800px;
     height: auto;
-    max-height: 800px;
+    max-height: 568px;
 }
 
 .todos li {  
     align-items: center;
     overflow: hidden;
     max-width: 400px;
-    height: 80px;
+    height: 100px;
 }
 
 .todos li input[type=checkbox] {
@@ -484,16 +493,16 @@ input[type="checkbox"]::before {
 }
 
 .textinho2 {
-    font-size: 32px;
+    font-size: 52px;
     gap: 20px;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     margin: 0 auto;
-    margin-top: 40px;
     padding: 20px;
-    font-family: 'Inter', sans-serif;
+    padding-top: 0;
+    font-family: 'Short Stack', cursive;
     font-weight: 700;
     animation: appear;
     animation-duration: 2s;

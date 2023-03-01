@@ -66,8 +66,8 @@ body {
 }
 
 #dia-semana {
-    font-family: 'Inter', cursive;
-    font-size: 32px;
+    font-family: 'Courgette', cursive;
+    font-size: 20px;
     display: flex;
     margin: 0 auto;
     padding: 12px;
@@ -95,8 +95,9 @@ body {
     align-items: center;
     justify-content: center;
     font-size: 44px;
+    margin-top: 32px;
     padding: 20px;
-    font-family: 'Architects Daughter', cursive;
+    font-family: 'Courgette', cursive;
     font-weight: 700;
     animation: appear;
     animation-duration: 2s;
@@ -113,7 +114,7 @@ body {
 .titulo-cor {
     color: rgba(82, 219, 123, 0.712);
     margin-right: 8px;
-    font-family: 'Short Stack', cursive;
+    font-family: 'Courgette', cursive;
 }
 
 #main-header {
@@ -409,7 +410,7 @@ footer p {
     }
 }
 
-@media (min-width: 800px) and (max-width: 1200px) {
+@media (min-width: 802px) and (max-width: 1200px) {
 
 #cabecalho {
     margin-bottom: 0px !important;
@@ -419,6 +420,10 @@ footer p {
     font-size: 40px;
     justify-content: flex-start;
     margin-left: 4px;
+}
+
+#dia-semana {
+    font-size: 20px;
 }
 
 #relogio {
@@ -481,7 +486,7 @@ input[type="checkbox"]::before {
 }
 
 #dia-semana {
-    font-size: 24px;
+    font-size: 20px;
 }
 
 #horas, #minutos, #segundos {
@@ -502,7 +507,7 @@ input[type="checkbox"]::before {
     margin: 0 auto;
     padding: 20px;
     padding-top: 0;
-    font-family: 'Short Stack', cursive;
+    font-family: 'Courgette', cursive;
     font-weight: 700;
     animation: appear;
     animation-duration: 2s;
@@ -526,7 +531,7 @@ input[type="checkbox"]::before {
 
 }
 
-@media (min-width: 360px) and (max-width: 800px) {
+@media (min-width: 360px) and (max-width: 802px) {
 
     .titulo {
         justify-content: center;

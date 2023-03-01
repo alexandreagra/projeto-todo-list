@@ -77,12 +77,12 @@ function textos() {
     document.body.style.backgroundColor = "#B9DBE9";
   } else if (horaAtual >= 18 || horaAtual < 00) {
     textinho.innerHTML = `<box-icon  type='solid' name='moon' size='lg' color='#E5E5E5'></box-icon>Good evening!`;
-    textinho2.innerHTML = `<box-icon  type='solid' name='moon' size='lg' color='#C9CCCB'></box-icon>Good evening!`;
+    textinho2.innerHTML = `<box-icon  type='solid' name='moon' size='lg' color='#E5E5E5'></box-icon>Good evening!`;
     document.body.style.backgroundColor = "#15253F";
     document.querySelector("#relogio").style.color = "#ffffffe0";
     document.querySelector("#data").style.color = "#ffffffe0";
     document.querySelector(".textinho").style.color = "#ffffffe0";
-    document.querySelector(".textinho2").style.color = "#C9CCCB";
+    document.querySelector(".textinho2").style.color = "#ffffffe0";
     document.querySelector(".titulo").style.color = "#ffffffe0";
     document.querySelector(".primeiro-titulo-header").style.color = "#ffffffe0";
     document.querySelector(".stats").style.color = "#ffffffe0";

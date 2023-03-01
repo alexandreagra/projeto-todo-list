@@ -538,7 +538,7 @@ input[type="checkbox"]::before {
         justify-content: center;
         justify-items: center;
         margin: auto;
-        font-size: 40px;
+        font-size: 36px;
         padding-top: 12px !important;
     }
 

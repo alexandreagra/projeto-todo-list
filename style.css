@@ -12,6 +12,10 @@ body {
     margin: 0; 
 }
 
+html {
+    -webkit-tap-highlight-color: transparent;
+  }
+
 #cabecalho {
     display: flex;
     flex-direction: row;

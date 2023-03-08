@@ -70,15 +70,15 @@ function textos() {
   if (horaAtual >= 00 && horaAtual < 12) {
     textinho.innerHTML = `<box-icon name='sun' color='#FFEC00' size='60px'></box-icon>Good morning!`;
     textinho2.innerHTML = `<box-icon name='sun' color='#FFEC00' size='60px'></box-icon>Good morning!`;
-    document.body.style.backgroundColor = "#CFF2FC";
+    document.body.style.backgroundColor = "#CEF0FD";
   } else if (horaAtual >= 12 && horaAtual < 18) {
-    textinho.innerHTML = `<box-icon type='solid' name='sun' color='white' size='lg'></box-icon>Good afternoon!`;
-    textinho2.innerHTML = `<box-icon type='solid' name='sun' color='white' size='lg'></box-icon>Good afternoon!`;
-    document.body.style.backgroundImage = "url('bg3.jpg')"
+    textinho.innerHTML = `<box-icon type='solid' name='sun' color='yellow' size='lg'></box-icon>Good afternoon!`;
+    textinho2.innerHTML = `<box-icon type='solid' name='sun' color='yellow' size='lg'></box-icon>Good afternoon!`;
+    document.body.style.backgroundColor = "#B9DBE9";
   } else if (horaAtual >= 18 || horaAtual < 00) {
     textinho.innerHTML = `<box-icon  type='solid' name='moon' size='lg' color='#E5E5E5'></box-icon>Good evening!`;
     textinho2.innerHTML = `<box-icon  type='solid' name='moon' size='lg' color='#E5E5E5'></box-icon>Good evening!`;
-    document.body.style.backgroundImage = "url('bg4.jpg')"
+    document.body.style.backgroundColor = "#15253F";
     document.querySelector("#relogio").style.color = "#ffffffe0";
     document.querySelector("#data").style.color = "#ffffffe0";
     document.querySelector(".textinho").style.color = "#ffffffe0";
